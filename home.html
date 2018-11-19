@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="home.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+
+    <title>Weekreate</title>
+</head>
+
+<body>
+    <main id="main">
+        <header>
+            <nav class="column column-12">
+                <div id="logo" class="column column-2">
+                    <span>logo</span>
+                </div>
+
+                <div id="menu-list" class="column column-10">
+                    <ul>
+                        <li class="list-item"><a href="">SOBRE</a></li>
+                        <li class="list-item"><a href="">INSCRIÇÃO</a></li>
+                        <li class="list-item"><a href="">CONTATO</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <section id="menu-horizontal">
+            <div id="menu-horizontal-list" class="column column-12">
+                <!-- <span onmousedown="onMouseOver(event)" onmouseup="onMouseOut(event)">
+                    <
+                </span> -->
+                <ul onmouseover="onMouseOver(event)" id="lista">
+                    <li id="palestras" class="list-horizontal-item"><a href="">Palestras/<br>Oficinas</a></li>
+                    <li id="workshops" class="list-horizontal-item"><a href="">Workshops</a></li>
+                    <li id="dinamica" class="list-horizontal-item"><a href="">Dinâmica</a></li>
+                    <li id="mais" class="list-horizontal-item"><a href="">Muito<br>mais...</a></li>
+                </ul>
+                <!-- <span onmousedown="onMouseaaa(event)" onmouseup="onMouseOut(event)">
+                     > 
+                </span> -->
+            </div>
+        </section>
+        <footer>
+            <div id="event-info" class="column column-12">
+                <ul class="column column-5">
+                    <li class="list-horizontal-item">12/12/1212 e 13/12/1212</li>
+                    <li class="list-horizontal-item">Senac - R. Coronel Genuĩno, 130 Centro Histórico - POA</li>
+                    <li class="list-horizontal-item">Das 08h08 até as 8h20</li>
+                </ul>
+            </div>
+        </footer>
+        <script>
+            function onMouseOver(e) {
+                var timeout;
+                e.preventDefault();
+
+                var list = document.querySelector('#lista');
+                var meioLista = (window.innerWidth / 2);
+                var x = e.clientX;
+
+                if (x < (meioLista)) {
+                    list.scroll(-4000, 0);
+
+                } else if (x > (meioLista)) {
+                    list.scroll(4000, 0);
+                }
+
+            }
+        </script>
+    </main>
+
+</body>
+
+</html>

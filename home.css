@@ -1,0 +1,275 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/*------------------------------*\
+    Grid System
+\*------------------------------*/
+
+.row {
+    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+.row:before,
+.row:after {
+    content: " ";
+    display: table;
+}
+
+.row:after {
+    clear: both;
+}
+
+.row,
+.column {
+    box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.column {
+    position: relative;
+    float: left;
+    clear: none;
+}
+
+.column:last-child {
+    float: none;
+}
+
+.column+.column {
+    margin-left: 1.5%;
+}
+
+.column-1 {
+    width: 6.86666666667%;
+}
+
+.column-2 {
+    width: 15.3333333333%;
+}
+
+.column-3 {
+    width: 23.8%;
+}
+
+.column-4 {
+    width: 32.2666666667%;
+}
+
+.column-5 {
+    width: 40.7333333333%;
+}
+
+.column-6 {
+    width: 49.2%;
+}
+
+.column-7 {
+    width: 57.6666666667%;
+}
+
+.column-8 {
+    width: 66.1333333333%;
+}
+
+.column-9 {
+    width: 74.6%;
+}
+
+.column-10 {
+    width: 83.0666666667%;
+}
+
+.column-11 {
+    width: 91.5333333333%;
+}
+
+.column-12 {
+    width: 100%;
+}
+
+/*------------------------------*\
+    End of Grid System
+\*------------------------------*/
+
+main {
+    height: 100vh;
+    background-color: blue;
+
+
+}
+header {
+     margin: 0vw 3vw;
+     min-height: 70px;
+         display: flex;
+
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#menu-list {
+    display: flex;
+    justify-content: flex-end;
+        align-items: center;
+
+    margin: 2px;
+    padding: 2px;
+
+}
+
+ul {
+    list-style: none;
+
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+#menu-list ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    margin: 3px 0px;
+}
+
+.list-item {
+    padding: 6px;
+
+}
+
+.list-item a {
+    padding: 6px;
+}
+
+section#menu-horizontal {
+    margin: 0vw 0vw;
+    height: calc(100vh - 230px);
+    transition: .3s;
+
+}
+
+#menu-horizontal-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    z-index: 1;
+    /* box-shadow: 3px 0px 186px -38px inset #18284a; */
+
+
+
+}
+
+#menu-horizontal-list ul {
+    width: calc(100vw);
+    scroll-behavior: smooth;
+    overflow-x: scroll;    
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    transition: .3s;
+}
+
+#menu-horizontal-list ul:hover {
+   opacity: 0.8;
+}
+
+
+#menu-horizontal-list ul::-webkit-scrollbar {
+     display: none;
+ }
+
+#menu-horizontal-list ul li{
+    margin: 40px;
+    padding-right: 50px;
+    transition: .3s;
+
+}
+
+#menu-horizontal-list ul li:hover {
+    transform: scale(1.1);
+
+}
+
+/* TODO: descobrir se tem como fazer isso*/
+#palestras:hover + #main {
+    background: yellow;
+}
+
+#menu-horizontal-list ul li a {
+    text-decoration: underline;
+    font-size: 60pt;
+    margin: 0px 0px;
+    padding: 0;
+}
+
+footer {
+    margin: 3px 3vw;
+}
+
+#event-info {
+    height: 100%;
+
+}
+
+#event-info ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+#event-info ul li {
+    padding: 2px;
+    margin: 3px;
+}
+
+
+#menu-horizontal-list ul:hover li {
+     
+
+}
+
+
+/*------------------------------*\
+    Mobile only
+\*------------------------------*/
+
+@media only screen and (max-width: 550px) {
+
+    .column-1,
+    .column-2,
+    .column-3,
+    .column-4,
+    .column-5,
+    .column-6,
+    .column-7,
+    .column-8,
+    .column-9,
+    .column-10,
+    .column-11,
+    .column-12 {
+        width: auto;
+        float: none;
+    }
+
+    .column+.column {
+        margin-left: 0;
+    }
+
+}
