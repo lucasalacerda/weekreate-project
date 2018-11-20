@@ -16,7 +16,6 @@
         <header>
             <nav class="column column-12">
                 <div id="logo" class="column column-2">
-                    <span>logo</span>
                 </div>
 
                 <div id="menu-list" class="column column-10">
@@ -32,9 +31,9 @@
             <div id="menu-horizontal-list" class="column column-12">
                 <ul onmouseover="onMouseOver(event)" id="lista">
                     <li id="palestras" onmouseover="changeBackgroundPalestras()" onmouseout="clearBackground()" class="list-horizontal-item"><a href="">Palestras/<br>Oficinas</a></li>
-                    <li id="workshops" onmouseover="changeBackgroundWorkshops()" class="list-horizontal-item"><a href="">Workshops</a></li>
-                    <li id="dinamica" class="list-horizontal-item"><a href="">Dinâmica</a></li>
-                    <li id="mais" class="list-horizontal-item"><a href="">Muito<br>mais...</a></li>
+                    <li id="workshops" onmouseover="changeBackgroundWorkshops()" onmouseout="clearBackground()" class="list-horizontal-item"><a href="">Workshops</a></li>
+                    <li id="dinamica"  onmouseover="changeBackgroundDinamica()"  onmouseout="clearBackground()" class="list-horizontal-item"><a href="">Dinâmica</a></li>
+                    <li id="mais"      onmouseover="changeBackgroundMais()"   onmouseout="clearBackground()" class="list-horizontal-item"><a href="">Muito<br>mais...</a></li>
                 </ul>
             </div>
         </section>
