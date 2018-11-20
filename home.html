@@ -20,7 +20,7 @@
                 </div>
 
                 <div id="menu-list" class="column column-10">
-                    <ul>
+                    <ul class="column column-6">
                         <li class="list-item"><a href="">SOBRE</a></li>
                         <li class="list-item"><a href="">INSCRIÇÃO</a></li>
                         <li class="list-item"><a href="">CONTATO</a></li>
@@ -30,18 +30,12 @@
         </header>
         <section id="menu-horizontal">
             <div id="menu-horizontal-list" class="column column-12">
-                <!-- <span onmousedown="onMouseOver(event)" onmouseup="onMouseOut(event)">
-                    <
-                </span> -->
                 <ul onmouseover="onMouseOver(event)" id="lista">
-                    <li id="palestras" class="list-horizontal-item"><a href="">Palestras/<br>Oficinas</a></li>
-                    <li id="workshops" class="list-horizontal-item"><a href="">Workshops</a></li>
+                    <li id="palestras" onmouseover="changeBackgroundPalestras()" onmouseout="clearBackground()" class="list-horizontal-item"><a href="">Palestras/<br>Oficinas</a></li>
+                    <li id="workshops" onmouseover="changeBackgroundWorkshops()" class="list-horizontal-item"><a href="">Workshops</a></li>
                     <li id="dinamica" class="list-horizontal-item"><a href="">Dinâmica</a></li>
                     <li id="mais" class="list-horizontal-item"><a href="">Muito<br>mais...</a></li>
                 </ul>
-                <!-- <span onmousedown="onMouseaaa(event)" onmouseup="onMouseOut(event)">
-                     > 
-                </span> -->
             </div>
         </section>
         <footer>
@@ -53,6 +47,7 @@
                 </ul>
             </div>
         </footer>
+        <script src="home.js"></script>
         <script>
             function onMouseOver(e) {
                 var timeout;

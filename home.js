@@ -1,16 +1,19 @@
-function onMouseOver(e){
-    var list = document.querySelector('#lista');
-    console.log(list);
-    var meioLista = (list.width / 2);
-    console.log(meioLista);
-
-    const x = e.clientX;
-    const y = e.clientY;
-
-    if (x < meioLista){
-        console.log('esquerda');
-    }
-    else {
-        console.log('direita');
-    }
+function changeBackgroundPalestras() {
+    console.log('palestras');
+    var main = document.querySelector('main');
+    main.classList.add('background-palestras');
 }
+
+function changeBackgroundWorkshops() {
+    console.log('workshops');
+    var main = document.querySelector('main');
+    main.classList.add('background-workshops');
+}
+
+function clearBackground() {
+    console.log('workshops');
+    var main = document.querySelector('main');
+    main.classList.add('.main');
+    main.classList.remove('background-workshops', 'background-palestras');
+}
+
