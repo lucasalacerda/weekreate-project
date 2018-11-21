@@ -2,7 +2,7 @@ html,
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 /*------------------------------*\
@@ -121,45 +121,6 @@ body {
     transition: 500ms;
 }
 
-.background-palestras {
-    background: red;  
-    position: absolute;
-    opacity: 0.8;
-    transition-timing-function: ease-in;
-    transition-duration: .1s;
-    transition: 500ms;
-    transition-delay: 300ms;
-
- }
-
- .background-dinamica {
-    background: green; 
-    opacity: 0.8;
-    transition-timing-function: ease-in;
-    transition-duration: .1s;
-    transition: 500ms;
-    transition-delay: 300ms;
-
- }
-
- .background-workshops {
-    background: yellow; 
-    opacity: 0.8;
-    transition-timing-function: ease-in;
-    transition-duration: .1s;
-    transition: 500ms;
-    transition-delay: 300ms;
-
- }
-
- .background-mais {
-    background: purple; 
-    opacity: 0.8;
-    transition-timing-function: ease-in;
-    transition-duration: .1s;
-    transition: 500ms;
-    transition-delay: 300ms;
- }
 
 ul {
     list-style: none;
@@ -192,7 +153,7 @@ nav {
 }
 
 #logo {
-    background: url(./img/weekreate-logo-sem-nome.png) ;
+    background: url(./img/weekreate-logo-sem-nome.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -221,11 +182,11 @@ nav {
     width: 100px;
     height: 20px;
     transition: .3s;
- }
+}
 
 .list-item:hover {
     opacity: 0.7;
- }
+}
 
 .list-item a {
     font-size: 14pt;
@@ -240,105 +201,74 @@ nav {
 \*------------------------------*/
 
 /*------------------------------*\
-    MENU HORIZONTAL
+   PRINCIPAL CONTENT
 \*------------------------------*/
 
-section#menu-horizontal {
-    margin: 0vw 0vw;
-    height: calc(100vh - 230px);
-    transition: .3s;
+#principal-content {
+      margin: 0vw 3vw;
+      display: flex;
 }
 
-#menu-horizontal-list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    /* box-shadow: 3px 0px 186px -38px inset #18284a; */
-
+#atividades-list {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 100%;
 }
 
-#menu-horizontal-list ul {
-    width: calc(100vw);
-    scroll-behavior: smooth;
-    overflow-x: scroll;    
-    padding: 50px;
+/* TODO: fazer o Smooth funcionar */
+#atividades-list ul {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-end;
+    align-content: flex-end;  
+    
     transition: .3s;
-}
+    scroll-behavior: smooth;
+    overflow-x: scroll;
 
-#menu-horizontal-list ul:hover {
-}
-
-
-#menu-horizontal-list ul::-webkit-scrollbar {
-     display: none;
- }
-
-#menu-horizontal-list ul li{
-    margin: 45px;
-    padding: 40px;
-    transition: .3s;
 
 }
 
-#menu-horizontal-list ul:first-child {
-     padding-right: 50px;
-
-}
-
-#menu-horizontal-list ul li:hover {
-    transform: scale(1.1);
-}
-
-#menu-horizontal-list ul li a {
-    text-decoration: underline;
-    font-size: 60pt;
-    margin: 0px 0px;
-    padding: 20px 0px;
-}
-
-/*------------------------------*\
-    End of MENU HORIZONTAL
-\*------------------------------*/
-
-/*------------------------------*\
-    FOOTER
-\*------------------------------*/
-
-footer {
-    margin: 3px 3vw;
-}
-
-#event-info {
-    height: 100%;
-
-}
-
-#event-info ul {
+#atividades-list ul li {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
     flex-wrap: wrap;
-    padding: 0;
-    margin: 0;
+    justify-content: space-between;
+    align-content: flex-end;
+  
 }
 
-#event-info ul li {
-    padding: 2px;
-    margin: 3px;
+.content-title {
+   
+
+
 }
 
+.content-list-item {
+        border: solid .1px;
 
-#menu-horizontal-list ul:hover li {
-     
+}
 
+#conteudo-mais {
+        border: solid .1px;
+
+}
+
+#conteudo-mais>table {
+    border: solid .1px;
+}
+
+thead tr th {
+    border: solid .1px;
+}
+
+tbody tr td {
+    border: solid .1px;
 }
 
 /*------------------------------*\
-    End of FOOTER
+    End of PRINCIPAL CONTENT
 \*------------------------------*/
 
 

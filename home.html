@@ -12,7 +12,10 @@
 </head>
 
 <body>
-    <main id="main">
+    <main>
+        <div id="main" class="main column column-12">
+            
+        </div>
         <header>
             <nav class="column column-12">
                 <div id="logo" class="column column-2">
@@ -30,10 +33,13 @@
         <section id="menu-horizontal">
             <div id="menu-horizontal-list" class="column column-12">
                 <ul onmouseover="onMouseOver(event)" id="lista">
-                    <li id="palestras" onmouseover="changeBackgroundPalestras()" onmouseout="clearBackground()" class="list-horizontal-item"><a href="">Palestras/<br>Oficinas</a></li>
-                    <li id="workshops" onmouseover="changeBackgroundWorkshops()" onmouseout="clearBackground()" class="list-horizontal-item"><a href="">Workshops</a></li>
-                    <li id="dinamica"  onmouseover="changeBackgroundDinamica()"  onmouseout="clearBackground()" class="list-horizontal-item"><a href="">Dinâmica</a></li>
-                    <li id="mais"      onmouseover="changeBackgroundMais()"   onmouseout="clearBackground()" class="list-horizontal-item"><a href="">Muito<br>mais...</a></li>
+<li id="palestras" onmouseover="changeBackgroundPalestras()" onmouseout="clearBackground()" class="list-horizontal-item"><a
+        href="./atividades.html#palestras">Palestras/<br>Oficinas</a></li>
+<li id="workshops" onmouseover="changeBackgroundWorkshops()" onmouseout="clearBackground()" class="list-horizontal-item"><a
+        href="./atividades.html#workshops">Workshops</a></li>
+<li id="dinamica" onmouseover="changeBackgroundDinamica()" onmouseout="clearBackground()" class="list-horizontal-item"><a
+        href="./atividades.html#dinamica">Dinâmica</a></li>
+<li id="mais" onmouseover="changeBackgroundMais()" onmouseout="clearBackground()" class="list-horizontal-item"><a href="./atividades.html#mais">Muito<br>mais...</a></li>
                 </ul>
             </div>
         </section>
@@ -47,24 +53,6 @@
             </div>
         </footer>
         <script src="home.js"></script>
-        <script>
-            function onMouseOver(e) {
-                var timeout;
-                e.preventDefault();
-
-                var list = document.querySelector('#lista');
-                var meioLista = (window.innerWidth / 2);
-                var x = e.clientX;
-
-                if (x < (meioLista)) {
-                    list.scroll(-4000, 0);
-
-                } else if (x > (meioLista)) {
-                    list.scroll(4000, 0);
-                }
-
-            }
-        </script>
     </main>
 
 </body>
