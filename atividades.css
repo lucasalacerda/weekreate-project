@@ -1,3 +1,21 @@
+/* latin-ext */
+@font-face {
+    font-family: 'Gudea';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Gudea'), url(https://fonts.gstatic.com/s/gudea/v7/neIFzCqgsI0mp9CG_oC-Nw.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Gudea';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Gudea'), url(https://fonts.gstatic.com/s/gudea/v7/neIFzCqgsI0mp9CI_oA.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 html,
 body {
     margin: 0;
@@ -123,6 +141,7 @@ body {
 
 
 ul {
+
     list-style: none;
 
 }
@@ -141,6 +160,7 @@ ul li a {
 \*------------------------------*/
 
 header {
+    font-family: "Gudea";
     margin: 0vw 3vw;
     height: 90px;
     display: flex;
@@ -152,16 +172,23 @@ nav {
     justify-content: space-between;
 }
 
+div a {
+
+    width: 80px;
+    height: 70px;
+}
+
 #logo {
     background: url(./img/weekreate-logo-sem-nome.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 80px;
-    height: 70px;
+    content: ' ';
+    display: block;
 }
 
 #menu-list {
+
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -205,30 +232,31 @@ nav {
 \*------------------------------*/
 
 #principal-content {
-      margin: 0vw 3vw;
-      display: flex;
+    font-family: "Gudea";
+
+    margin: 0vw 3vw;
+    display: flex;
 }
 
 #atividades-list {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
-/* TODO: fazer o Smooth funcionar */
 #atividades-list ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-end;
-    align-content: flex-end;  
-    
+    height: calc(100vh - 230px);
     transition: .3s;
     scroll-behavior: smooth;
-    overflow-x: scroll;
+    overflow-y: scroll;
+}
 
-
+#atividades-list ul::-webkit-scrollbar {
+    display: none;
 }
 
 #atividades-list ul li {
@@ -236,41 +264,47 @@ nav {
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: flex-end;
-  
+    margin: 15px;
 }
 
-.content-title {
-   
-
-
+.content-info {
+    padding: 4px;
 }
 
-.content-list-item {
-        border: solid .1px;
+.content-list-item {}
 
+#conteudo-mais table {
+    width: calc(100vw - 200px);
+    border-collapse: collapse;
 }
 
-#conteudo-mais {
-        border: solid .1px;
+table,
+th,
+td {
+    border: 1px solid black;
+    text-align: center;
 
 }
-
-#conteudo-mais>table {
-    border: solid .1px;
-}
-
-thead tr th {
-    border: solid .1px;
-}
-
-tbody tr td {
-    border: solid .1px;
+th {
+    background: purple;
 }
 
 /*------------------------------*\
     End of PRINCIPAL CONTENT
 \*------------------------------*/
 
+/*------------------------------*\
+    FOOTER
+\*------------------------------*/
+
+footer {
+    font-family: "Gudea";
+    margin: 3px 3vw;
+}
+
+/*------------------------------*\
+    End of FOOTER
+\*------------------------------*/
 
 /*------------------------------*\
     Mobile only

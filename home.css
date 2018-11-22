@@ -1,3 +1,21 @@
+/* latin-ext */
+@font-face {
+    font-family: 'Gudea';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Gudea'), url(https://fonts.gstatic.com/s/gudea/v7/neIFzCqgsI0mp9CG_oC-Nw.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Gudea';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Gudea'), url(https://fonts.gstatic.com/s/gudea/v7/neIFzCqgsI0mp9CI_oA.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 html,
 body {
     margin: 0;
@@ -103,8 +121,6 @@ body {
 \*------------------------------*/
 
 #main {
-    height: 100vh;
-    width: 100vw;
     position: absolute;
     transition-timing-function: ease-in;
     transition-duration: .1s;
@@ -113,53 +129,71 @@ body {
 }
 
 .main {
-    background: blue;
+    height: calc(100vh - 150px);
+    background: url(./img/ComAmorVanGogh.jpg);
+    background-size: cover;
+    background-position: top;
     position: absolute;
-    opacity: 0.8;
+    opacity: 0.6;
     transition-timing-function: ease-in;
     transition-duration: .1s;
     transition: 500ms;
+    transition-delay: 300ms;
+
 }
 
 .background-palestras {
-    background: red;  
+    height: calc(100vh - 150px);
+    background: url(./img/art-nouveau.jpeg);
+    background-size: cover;
+    background-position: bottom;
     position: absolute;
-    opacity: 0.8;
+    opacity: 0.6;
     transition-timing-function: ease-in;
     transition-duration: .1s;
     transition: 500ms;
     transition-delay: 300ms;
 
- }
+}
 
- .background-dinamica {
-    background: green; 
-    opacity: 0.8;
+.background-workshops {
+    height: calc(100vh - 150px);
+    background: url(./img/arts-crafts.jpg);
+    background-size: cover;
+    background-position: bottom;
+    opacity: 0.6;
     transition-timing-function: ease-in;
     transition-duration: .1s;
     transition: 500ms;
     transition-delay: 300ms;
 
- }
+}
 
- .background-workshops {
-    background: yellow; 
-    opacity: 0.8;
+
+.background-dinamica {
+    height: calc(100vh - 150px);
+    background: url(./img/arts-crafts.jpg);
+    background-size: cover;
+    background-position: bottom;
+    opacity: 0.6;
     transition-timing-function: ease-in;
     transition-duration: .1s;
     transition: 500ms;
     transition-delay: 300ms;
 
- }
+}
 
- .background-mais {
-    background: purple; 
-    opacity: 0.8;
+.background-mais {
+    height: calc(100vh - 150px);
+    background: url(./img/van-gogh-quarto.jpg);
+    background-size: cover;
+    background-position: top;
+    opacity: 0.6;
     transition-timing-function: ease-in;
     transition-duration: .1s;
     transition: 500ms;
     transition-delay: 300ms;
- }
+}
 
 ul {
     list-style: none;
@@ -180,6 +214,8 @@ ul li a {
 \*------------------------------*/
 
 header {
+    font-family: "Gudea";
+
     margin: 0vw 3vw;
     height: 90px;
     display: flex;
@@ -191,13 +227,18 @@ nav {
     justify-content: space-between;
 }
 
+div a {
+    width: 80px;
+    height: 70px;
+}
+
 #logo {
-    background: url(./img/weekreate-logo-sem-nome.png) ;
+    background: url(./img/weekreate-logo-sem-nome.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 80px;
-    height: 70px;
+    display: block;
+
 }
 
 #menu-list {
@@ -221,11 +262,11 @@ nav {
     width: 100px;
     height: 20px;
     transition: .3s;
- }
+}
 
 .list-item:hover {
     opacity: 0.7;
- }
+}
 
 .list-item a {
     font-size: 14pt;
@@ -244,6 +285,7 @@ nav {
 \*------------------------------*/
 
 section#menu-horizontal {
+    font-family: "Gudea";
     margin: 0vw 0vw;
     height: calc(100vh - 230px);
     transition: .3s;
@@ -261,7 +303,7 @@ section#menu-horizontal {
 #menu-horizontal-list ul {
     width: calc(100vw);
     scroll-behavior: smooth;
-    overflow-x: scroll;    
+    overflow-x: scroll;
     padding: 50px;
     display: flex;
     justify-content: space-between;
@@ -269,15 +311,14 @@ section#menu-horizontal {
     transition: .3s;
 }
 
-#menu-horizontal-list ul:hover {
-}
+#menu-horizontal-list ul:hover {}
 
 
 #menu-horizontal-list ul::-webkit-scrollbar {
-     display: none;
- }
+    display: none;
+}
 
-#menu-horizontal-list ul li{
+#menu-horizontal-list ul li {
     margin: 45px;
     padding: 40px;
     transition: .3s;
@@ -285,7 +326,7 @@ section#menu-horizontal {
 }
 
 #menu-horizontal-list ul:first-child {
-     padding-right: 50px;
+    padding-right: 50px;
 
 }
 
@@ -296,8 +337,6 @@ section#menu-horizontal {
 #menu-horizontal-list ul li a {
     text-decoration: underline;
     font-size: 60pt;
-    margin: 0px 0px;
-    padding: 20px 0px;
 }
 
 /*------------------------------*\
@@ -309,6 +348,7 @@ section#menu-horizontal {
 \*------------------------------*/
 
 footer {
+    font-family: "Gudea";
     margin: 3px 3vw;
 }
 
@@ -332,10 +372,7 @@ footer {
 }
 
 
-#menu-horizontal-list ul:hover li {
-     
-
-}
+#menu-horizontal-list ul:hover li {}
 
 /*------------------------------*\
     End of FOOTER
