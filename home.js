@@ -28,6 +28,10 @@ function clearBackground() {
     main.classList.remove('background-workshops', 'background-palestras', 'background-dinamica', 'background-mais');
 }
 
+function setUnderline() {
+    
+}
+
 function onMouseOver(e) {
     var timeout;
     e.preventDefault();

@@ -20,7 +20,7 @@ html,
 body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 /*------------------------------*\
@@ -131,7 +131,7 @@ body {
 }
 
 .main {
-    background: blue;
+    background: url('./img/impressionismo-monet-barco.jpg');
     position: absolute;
     opacity: 0.8;
     transition-timing-function: ease-in;
@@ -172,13 +172,10 @@ nav {
     justify-content: space-between;
 }
 
-div a {
-
-    width: 80px;
-    height: 70px;
-}
 
 #logo {
+     width: 80px;
+     height: 70px;
     background: url(./img/weekreate-logo-sem-nome.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -233,7 +230,6 @@ div a {
 
 #principal-content {
     font-family: "Gudea";
-
     margin: 0vw 3vw;
     display: flex;
 }
@@ -249,7 +245,7 @@ div a {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    height: calc(100vh - 230px);
+    height: calc(100vh - 130px);
     transition: .3s;
     scroll-behavior: smooth;
     overflow-y: scroll;
@@ -267,8 +263,13 @@ div a {
     margin: 15px;
 }
 
+.content-title {
+    font-size: 22pt;
+}
+
 .content-info {
     padding: 4px;
+    font-size: 18pt;
 }
 
 .content-list-item {}
@@ -286,7 +287,6 @@ td {
 
 }
 th {
-    background: purple;
 }
 
 /*------------------------------*\
