@@ -146,7 +146,7 @@ ul {
 
 }
 
-ul li a {
+#menu-list ul li a {
     text-decoration: none;
     color: white;
 }
@@ -164,6 +164,16 @@ header {
     margin: 0vw 3vw;
     height: 90px;
     display: flex;
+    transition: .5s;
+
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    background-color: #100f0f;
+
 }
 
 nav {
@@ -185,7 +195,6 @@ nav {
 }
 
 #menu-list {
-
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -234,6 +243,18 @@ nav {
     display: flex;
 }
 
+.content-list-item {
+    margin: 0 4px;
+}
+
+#sobre {
+    margin: 70px 0px !important;
+}
+
+.indent-paragrath {
+    text-indent: 4em;
+}
+
 #atividades-list {
     display: flex;
     align-items: center;
@@ -264,17 +285,47 @@ nav {
 }
 
 .content-title {
+    padding: 0;
+    margin: 0;
     font-size: 22pt;
+    opacity: 1;
+    animation: content-effect 2s ease;
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    
+}
+
+.content-title::before {
+     content: "";
+     position: absolute;
+     width: 100%;
+     height: 3px;
+     bottom: 0;
+     left: 0;
+     box-shadow: 4px 1px 10px #000000;
+     background-color: white;
+     visibility: hidden;
+     -webkit-transform: scaleX(0);
+     transform: scaleX(0);
+     -webkit-transition: all 0.3s ease-in-out 0s;
+     transition: all 0.2s ease-in-out 0s;
+}
+
+.content-title:before {
+    
 }
 
 .content-info {
-    padding: 4px;
-    font-size: 18pt;
+    font-size: 12pt;
+    background-color: white;
+    animation: content-effect 2s ease;
 }
 
 .content-list-item {}
 
 #conteudo-mais table {
+
     width: calc(100vw - 200px);
     border-collapse: collapse;
 }
@@ -282,6 +333,7 @@ nav {
 table,
 th,
 td {
+    
     border: 1px solid black;
     text-align: center;
 
@@ -304,6 +356,26 @@ footer {
 
 /*------------------------------*\
     End of FOOTER
+\*------------------------------*/
+
+
+/*------------------------------*\
+    KEYFRAMES
+\*------------------------------*/
+
+
+@keyframes content-effect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*------------------------------*\
+    End of KEYFRAMES
 \*------------------------------*/
 
 /*------------------------------*\
