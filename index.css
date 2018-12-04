@@ -205,6 +205,12 @@ ul li a {
     color: white;
 }
 
+.empty-img {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
 /*------------------------------*\
     End of COMMONS
 \*------------------------------*/
